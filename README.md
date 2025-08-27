@@ -1,4 +1,10 @@
-## Como rodar o projeto
+## Alunos:
+
+Matheus Alves Bueno Machado
+
+Felipe Biava Favarin
+
+## Como executar o projeto
 
 1. Clone o repositório com:
 ```bash
@@ -48,3 +54,7 @@ Para voltar a sua branch:
 ```bash
 git checkout <nome-branch>
 ```
+
+## Observações
+
+O arquivo VendingMachine.jff é um arquivo do software JFLAP. Logo, é possível abrir o arquivo no software e ver o autômato realizado
