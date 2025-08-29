@@ -1,0 +1,14 @@
+# Ignorar ambiente virtual
+.venv/
+venv/
+
+# Arquivos Python compilados
+__pycache__/
+*.py[cod]
+
+# Arquivos temporários do sistema
+*.swp
+.DS_Store
+
+# Arquivos do editor (exemplo VSCode)
+.vscode/
