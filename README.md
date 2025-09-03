@@ -1,60 +1,84 @@
-## Alunos:
+# 🥤 Vending Machine — Projeto de Linguagens Formais
 
-Matheus Alves Bueno Machado
+## 👨‍🎓 Alunos
+- Matheus Alves Bueno Machado  
+- Felipe Biava Favarin
 
-Felipe Biava Favarin
+## 📦 Clonando o Repositório e Configurando o Ambiente
 
-## Como executar o projeto
-
-1. Clone o repositório com:
 ```bash
-git clone https://github.com/alvesthw/Vending_-Machine.git
-```
+# 📦 Clonar o repositório
+git clone https://github.com/alvesthw/Vending-Machine.git
+cd "Vending Machine"
 
-2. Crie o ambiente virtual com:
-```bash
-python -m venv venv
-```
+# ⚙️ Criar o ambiente virtual
+python -m venv .venv
 
-E Ative o ambiente virtual com:
-```bash
-source venv/bin/activate
-```
+# Ativar o ambiente virtual
 
-3. Para desativar o ambiente virtual, faça:
-```bash
+# No Windows (PowerShell)
+.\.venv\Scripts\activate
+
+# No Windows (CMD)
+.venv\Scripts\activate.bat
+
+# No Linux/macOS
+source .venv/bin/activate
+
+# Desativar o ambiente virtual
 deactivate
-```
 
-4. Para instalar os requisitos do código:
-```bash
+# 📚 Instalar dependências
 pip install -r requirements.txt
-```
 
-5. Criação da própria Branch
-```bash
-git checkout -b <nome-branch>
-```
+# 🌿 Criar uma nova branch
+git checkout -b <nome-da-branch>
 
-```bash
-git push -u origin <nome-branch>
-```
+# Fazer commit e enviar para o GitHub
+git add .
+git commit -m "Mensagem do commit"
+git push -u origin <nome-da-branch>
 
-6. Para puxar a branch main do github:
-```bash
+# Atualizar sua branch com a main
 git checkout main
-```
-
-E faça:
-```bash
 git pull origin main
+git checkout <nome-da-branch>
+
+# (Opcional) Rebase da main
+git rebase main
+
+# ▶️ Executar o projeto com Python
+python main.py
+
+# 🛠️ Gerar executável com PyInstaller
+pyinstaller --onefile --windowed main.py
 ```
 
-Para voltar a sua branch:
-```bash
-git checkout <nome-branch>
-```
+# 🧾 Usando o Executável (.exe)
+Diretamente: exe/VendingMachine.exe
 
-## Observações
+Via arquivo .zip: Baixe e descompacte release/VendingMachine.zip Execute VendingMachine.exe dentro da pasta descompactada
 
-O arquivo VendingMachine.jff é um arquivo do software JFLAP. Logo, é possível abrir o arquivo no software e ver o autômato realizado
+# 📝 Observações
+O arquivo VendingMachine.jff pode ser aberto com o software JFLAP para visualizar o autômato.
+
+A pasta images/ contém os recursos visuais utilizados no projeto.
+
+As pastas .venv/, dist/ e build/ estão listadas no .gitignore e não devem ser enviadas ao GitHub.
+
+Para qualquer alteração no executável, basta gerar um novo .exe com PyInstaller.
+
+# 📁 Estrutura do Projeto
+plaintext
+Vending Machine/
+├── .venv/                ← Ambiente virtual
+├── images/               ← Imagens do projeto
+├── exe/                  ← Executável zipado
+├── dist/                 ← Build temporário (PyInstaller)
+├── build/                ← Build temporário (PyInstaller)
+├── main.py               ← Script principal
+├── utils.py              ← Código auxiliar
+├── VendingMachine.jff    ← Arquivo JFLAP
+├── requirements.txt      ← Dependências
+├── README.md             ← Este arquivo
+├── *.spec                ← Arquivos PyInstaller (temporários)
