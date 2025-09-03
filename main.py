@@ -2,6 +2,20 @@ from tkinter import *
 from tkinter import ttk
 from PIL import ImageTk, Image
 from tkinter import messagebox
+import sys
+import os
+
+# Caminho base, funciona no script e no exe
+if getattr(sys, 'frozen', False):
+    # Se estiver rodando como exe
+    BASE_DIR = sys._MEIPASS
+else:
+    # Se estiver rodando como script Python
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Caminho das imagens
+imagem_fundo_path = os.path.join(BASE_DIR, "images", "maquina_vendas.png")
+product_img_path = os.path.join(BASE_DIR, "images", "refri.png")
 
 class VendingMachine:
     def __init__(self, message_label, canvas, state_circles, product_label, product_img):
@@ -70,8 +84,8 @@ root.title("Vending Machine")
 root.geometry("600x700")
 root.resizable(False, False)
 
-# Carregar imagem de fundo
-imagem_fundo = Image.open("./images/maquina_vendas.png")
+# Imagem de fundo
+imagem_fundo = Image.open(imagem_fundo_path)
 escala = 0.7
 imagem_fundo = imagem_fundo.resize((int(imagem_fundo.width * escala), int(imagem_fundo.height * escala)))
 bg = ImageTk.PhotoImage(imagem_fundo)
@@ -102,14 +116,10 @@ for value, (x, y) in state_positions.items():
     canvas.create_text(x, y, text=f"{value}c")
     state_circles[value] = circle
     
-# Carregar imagem do produto (ex.: refrigerante)
-product_img = Image.open("./images/refri.png")
-product_img = product_img.resize((40, 100))  # menor que antes
-
-# Girar a imagem de lado (90 graus no sentido horário)
+# Imagem do produto
+product_img = Image.open(product_img_path)
+product_img = product_img.resize((40, 100))
 product_img = product_img.rotate(90, expand=True)
-
-# Converter para Tkinter
 product_img = ImageTk.PhotoImage(product_img)
 
 product_label = Label(root, bg=root["bg"])

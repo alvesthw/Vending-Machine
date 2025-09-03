@@ -53,6 +53,11 @@ python main.py
 # 🛠️ Gerar executável com PyInstaller
 pyinstaller --onefile --windowed main.py
 ```
+# Gerar executável
+pyinstaller --onefile --windowed main.py --add-data "images;images"
+
+# Compacta o executável em um zip dentro da pasta exe_zip
+Compress-Archive -Path .\dist\main.exe -DestinationPath .\exe_zip\VendingMachine.zip
 
 # 🧾 Usando o Executável (.exe)
 Diretamente: exe/VendingMachine.exe
