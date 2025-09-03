@@ -69,7 +69,7 @@ As pastas .venv/, dist/ e build/ estão listadas no .gitignore e não devem ser 
 Para qualquer alteração no executável, basta gerar um novo .exe com PyInstaller.
 
 # 📁 Estrutura do Projeto
-plaintext
+```bash
 Vending Machine/
 ├── .venv/                ← Ambiente virtual
 ├── images/               ← Imagens do projeto
@@ -82,3 +82,4 @@ Vending Machine/
 ├── requirements.txt      ← Dependências
 ├── README.md             ← Este arquivo
 ├── *.spec                ← Arquivos PyInstaller (temporários)
+```
