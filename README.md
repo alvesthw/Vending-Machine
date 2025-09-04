@@ -1,14 +1,15 @@
-## Alunos:
+# 🥤 Vending Machine — Projeto de Linguagens Formais
 
-Matheus Alves Bueno Machado
-
-Felipe Biava Favarin
+## 👨‍🎓 Alunos
+- Matheus Alves Bueno Machado  
+- Felipe Biava Favarin
 
 ## Como executar o projeto
 
 1. Clone o repositório com:
 ```bash
-git clone https://github.com/alvesthw/Vending_-Machine.git
+git clone https://github.com/alvesthw/Vending-Machine.git
+cd "Vending Machine"
 ```
 
 2. Crie o ambiente virtual com:
@@ -16,14 +17,9 @@ git clone https://github.com/alvesthw/Vending_-Machine.git
 python -m venv venv
 ```
 
-E Ative o ambiente virtual com:
+3. E Ative o ambiente virtual com:
 ```bash
 source venv/bin/activate
-```
-
-3. Para desativar o ambiente virtual, faça:
-```bash
-deactivate
 ```
 
 4. Para instalar os requisitos do código:
@@ -31,30 +27,40 @@ deactivate
 pip install -r requirements.txt
 ```
 
-5. Criação da própria Branch
+5. Rodar o projeto
 ```bash
-git checkout -b <nome-branch>
+python main.py
 ```
 
+6. Gerar o executavel
 ```bash
-git push -u origin <nome-branch>
+pyinstaller --onefile --windowed main.py --add-data "images;images"
 ```
 
-6. Para puxar a branch main do github:
+# 🧾 Usando o Executável (.exe)
+Diretamente Vending-Machine\exe_zip
+
+# 📝 Observações
+O arquivo VendingMachine.jff pode ser aberto com o software JFLAP para visualizar o autômato.
+
+A pasta images/ contém os recursos visuais utilizados no projeto.
+
+As pastas .venv/, dist/ e build/ estão listadas no .gitignore e não devem ser enviadas ao GitHub.
+
+Para qualquer alteração no executável, basta gerar um novo .exe com PyInstaller.
+
+# 📁 Estrutura do Projeto
 ```bash
-git checkout main
+Vending Machine/
+├── .venv/                ← Ambiente virtual
+├── images/               ← Imagens do projeto
+├── exe/                  ← Executável zipado
+├── dist/                 ← Build temporário (PyInstaller)
+├── build/                ← Build temporário (PyInstaller)
+├── main.py               ← Script principal
+├── utils.py              ← Código auxiliar
+├── VendingMachine.jff    ← Arquivo JFLAP
+├── requirements.txt      ← Dependências
+├── README.md             ← Este arquivo
+├── *.spec                ← Arquivos PyInstaller (temporários)
 ```
-
-E faça:
-```bash
-git pull origin main
-```
-
-Para voltar a sua branch:
-```bash
-git checkout <nome-branch>
-```
-
-## Observações
-
-O arquivo VendingMachine.jff é um arquivo do software JFLAP. Logo, é possível abrir o arquivo no software e ver o autômato realizado
